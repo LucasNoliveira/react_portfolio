@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import TopNav from './components/Topnav';
+import './index.css'; // ou o caminho correto para o arquivo gerado pelo Tailwind CSS
+import HeroComponent from './components/Hero';
+import AboutMe from './components/AboutMe';
+import Projects from './components/Projects';
+import WhyHireMe from './components/WhyHireMe';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TopNav />
+      
+      <HeroComponent />
+      <AboutMe />
+      <Projects />
+      <WhyHireMe />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
