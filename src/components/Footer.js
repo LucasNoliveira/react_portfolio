@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 
 const FooterComponent = () => {
     return (
@@ -7,9 +8,15 @@ const FooterComponent = () => {
                 <div className="flex justify-between items-center">
                     <p className="text-gray-300">© 2024 Seu Nome. Todos os direitos reservados.</p>
                     <div className="flex space-x-4">
-                        <a href="#" className="text-gray-300 hover:text-white">LinkedIn</a>
-                        <a href="#" className="text-gray-300 hover:text-white">GitHub</a>
-                        <a href="#" className="text-gray-300 hover:text-white">Twitter</a>
+                        <a href="#" className="text-gray-300 hover:text-white">
+                            <FaLinkedin />
+                        </a>
+                        <a href="#" className="text-gray-300 hover:text-white">
+                            <FaGithub />
+                        </a>
+                        <a href="#" className="text-gray-300 hover:text-white">
+                            <FaTwitter />
+                        </a>
                     </div>
                 </div>
             </div>
