@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaGithub, FaGlobe } from 'react-icons/fa';
 
 const ProjectsComponent = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -15,34 +16,6 @@ const ProjectsComponent = () => {
         {
             id: 2,
             title: "Projeto 2",
-            description: "Descrição do Projeto 2.",
-            githubLink: "https://github.com/seu-usuario/projeto-2",
-            hostedLink: "https://projeto-2.com"
-        },
-        {
-            id: 3,
-            title: "Projeto 3",
-            description: "Descrição do Projeto 2.",
-            githubLink: "https://github.com/seu-usuario/projeto-2",
-            hostedLink: "https://projeto-2.com"
-        },
-        {
-            id: 4,
-            title: "Projeto 4",
-            description: "Descrição do Projeto 2.",
-            githubLink: "https://github.com/seu-usuario/projeto-2",
-            hostedLink: "https://projeto-2.com"
-        },
-        {
-            id: 5,
-            title: "Projeto 5",
-            description: "Descrição do Projeto 2.",
-            githubLink: "https://github.com/seu-usuario/projeto-2",
-            hostedLink: "https://projeto-2.com"
-        },
-        {
-            id: 6,
-            title: "Projeto 6",
             description: "Descrição do Projeto 2.",
             githubLink: "https://github.com/seu-usuario/projeto-2",
             hostedLink: "https://projeto-2.com"
@@ -71,9 +44,10 @@ const ProjectsComponent = () => {
                                 <p className="text-gray-600 mb-4">{project.description}</p>
                                 <button
                                     onClick={() => openProjectDetails(project)}
-                                    className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+                                    className="bg-blue-500 text-white py-2 px-4 rounded-md flex items-center justify-center hover:bg-blue-600 transition duration-300"
                                 >
-                                    Detalhes
+                                    <FaGlobe className="mr-2" />
+                                    <span>Detalhes</span>
                                 </button>
                             </div>
                         </div>
@@ -88,8 +62,14 @@ const ProjectsComponent = () => {
                         <h3 className="text-2xl font-semibold mb-4">{selectedProject.title}</h3>
                         <p className="text-gray-600 mb-4">{selectedProject.description}</p>
                         <div className="flex justify-between">
-                            <a href={selectedProject.githubLink} className="text-blue-500 hover:underline">GitHub</a>
-                            <a href={selectedProject.hostedLink} className="text-blue-500 hover:underline">Projeto Hospedado</a>
+                            <a href={selectedProject.githubLink} className="text-blue-500 hover:underline flex items-center">
+                                <FaGithub className="mr-2" />
+                                <span>GitHub</span>
+                            </a>
+                            <a href={selectedProject.hostedLink} className="text-blue-500 hover:underline flex items-center">
+                                <FaGlobe className="mr-2" />
+                                <span>Projeto Hospedado</span>
+                            </a>
                         </div>
                         <button
                             onClick={closeProjectDetails}
